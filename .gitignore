@@ -1,0 +1,32 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Data (large, downloaded via Kaggle - not committed)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Trained model artifacts (large binaries - not committed)
+models/**/*.h5
+models/**/*.keras
+models/**/*.pkl
+models/**/*.joblib
+!models/**/.gitkeep
+
+# Kaggle credentials
+kaggle.json
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Streamlit
+.streamlit/
