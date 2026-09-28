@@ -1,0 +1,5 @@
+{
+  "vocab_size": 20000,
+  "max_len": 100,
+  "max_samples_used": 120000
+}
