@@ -1,0 +1,7 @@
+{
+  "rmse": 20.891293910043533,
+  "mae": 16.12653709860409,
+  "mape_excluding_zero_actual_days": 0.15045469395599118,
+  "test_set_size_days": 119,
+  "mean_actual_demand": 107.12605042016807
+}
