@@ -312,7 +312,6 @@ This launches the unified dashboard with four sections/tabs:
 7. Hugging Face Datasets — ethz/food101 — https://huggingface.co/datasets/ethz/food101
 
 ---
-
 ### Next Step
 
 This README defines the finalized architecture and dataset plan for the **Smart Hospitality Management System**. Per your instructions, no code has been written yet.
@@ -324,3 +323,4 @@ Please confirm to proceed with:
 - Tests
 - Project report outline
 - Viva questions & answers
+ Done ✅ 
