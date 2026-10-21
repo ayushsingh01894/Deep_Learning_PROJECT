@@ -7,7 +7,7 @@ __pycache__/
 venv/
 .venv/
 
-# Data (large, downloaded via Kaggle - not committed)
+# Data (large, download via Kaggle - not committed)
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
