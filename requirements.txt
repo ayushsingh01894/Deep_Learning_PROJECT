@@ -12,7 +12,7 @@ nltk>=3.8
 # ==== Computer Vision (Module 4 - Food Classification) ====
 Pillow>=10.0
 
-# ==== Visualization / EDA ====
+#  EDA ====
 matplotlib>=3.7
 seaborn>=0.12
 
