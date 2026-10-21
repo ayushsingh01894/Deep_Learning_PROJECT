@@ -16,7 +16,7 @@ Pillow>=10.0
 matplotlib>=3.7
 seaborn>=0.12
 
-# ==== Application ====
+
 streamlit>=1.30
 
 # ==== Dataset download ====
