@@ -214,86 +214,18 @@ smart-hospitality-management-system/
 └── .gitignore
 ```
 
-## 11. Installation
-
-```bash
-git clone <repo-url>
-cd smart-hospitality-management-system
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-`requirements.txt` will be generated alongside the source code in the next step and will pin: `tensorflow`, `streamlit`, `pandas`, `numpy`, `scikit-learn`, `nltk`, `matplotlib`, `seaborn`, `Pillow`, `joblib`, `pytest`, plus optional `transformers`/`torch` for the sentiment stretch goal.
-
-## 12. Dataset Setup Instructions
-
-1. Create a free Kaggle account and generate an API token (`kaggle.json`) from *Account → Create New API Token*.
-2. Place `kaggle.json` at `~/.kaggle/kaggle.json` (`chmod 600` on Linux/Mac).
-3. Download each dataset into `data/raw/`:
-
-```bash
-# Module 1 & 3 — Hotel Booking Demand
-kaggle datasets download -d jessemostipak/hotel-booking-demand -p data/raw/booking_demand --unzip
-
-# Module 2 — 515K Hotel Reviews (Europe)
-kaggle datasets download -d jiashenliu/515k-hotel-reviews-data-in-europe -p data/raw/hotel_reviews --unzip
-
-# Module 4 — Food-101
-kaggle datasets download -d kmader/food41 -p data/raw/food101 --unzip
-```
-
-(Alternative for Module 4: download directly from the official ETH Zürich source at https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/, or via Hugging Face `datasets` / TensorFlow Datasets `food101` loaders — to be decided based on what's fastest in the training environment.)
-
-## 13. Training Instructions
-
-Each module will have its own runnable training script, invoked independently, e.g.:
-
-```bash
-python src/booking_prediction/train.py
-python src/sentiment_analysis/train.py
-python src/demand_forecasting/train.py
-python src/food_classification/train.py
-```
-
-Each script will: load processed data → build the model from `model.py` → train with checkpointing/early stopping → save the final model to `models/<module>/` → write metrics/plots to `reports/`.
-
-*(Training scripts are not yet implemented — this is the deliverable of the next phase, pending your confirmation.)*
-
-## 14. Evaluation
-
-Each module's `evaluate.py` will load the saved model and the held-out test split and report the metrics appropriate to its task:
-
 - **Booking Prediction:** Accuracy, Precision, Recall, F1-score, ROC-AUC, confusion matrix.
 - **Sentiment Analysis:** Accuracy, Precision/Recall/F1 (per class), confusion matrix.
 - **Demand Forecasting:** RMSE, MAE, MAPE, actual-vs-predicted plot.
 - **Food Classification:** Top-1 accuracy, per-class precision/recall, confusion matrix, sample misclassifications (error analysis).
 
-**No numbers are reported yet. Results will be updated after model training.**
-
-## 15. Application / Demo Instructions
-
-Once models are trained and saved:
-
-```bash
-streamlit run app/Home.py
-```
-
-This launches the unified dashboard with four sections/tabs:
 
 - 🏨 **Hotel Booking Prediction** — enter booking details → get cancellation probability.
 - 💬 **Hotel Review Sentiment Analysis** — paste/enter a review → get sentiment label + confidence.
 - 📈 **Room Demand Forecasting** — view historical demand + forecasted demand for upcoming days.
 - 🍽️ **Food Image Classification** — upload a food photo → get predicted category + confidence.
 
-## 16. Limitations
-
-- Booking and demand-forecasting data comes from two specific Portuguese hotels (2015–2017); generalization to other hotels/regions is not guaranteed.
-- The full Food-101 dataset (101 classes, 101K images) may be reduced to a class subset for training-time feasibility on typical student hardware — this will be explicitly documented, not hidden.
-- Sentiment labels are derived heuristically from numeric review scores rather than hand-annotated, which can introduce label noise.
-- Real-time production concerns (model drift, live data pipelines, authentication, scaling) are out of scope for this academic project.
-
-## 17. Future Scope
+## 11. Future Scope
 
 - Fine-tune a transformer-based model (BERT/DistilBERT) for sentiment analysis and compare against the LSTM baseline.
 - Extend demand forecasting to multivariate forecasting (weather, local events, seasonality features).
@@ -301,7 +233,7 @@ This launches the unified dashboard with four sections/tabs:
 - Add a recommendation module (e.g., personalized room/offer recommendations) as a fifth module.
 - Deploy the system with a proper backend (FastAPI) and database instead of only a Streamlit demo.
 
-## 18. References
+## 12. References
 
 1. Antonio, N., de Almeida, A., & Nunes, L. (2019). *Hotel Booking Demand Datasets.* Data in Brief, 22, 41–49.
 2. Bossard, L., Guillaumin, M., & Van Gool, L. (2014). *Food-101 – Mining Discriminative Components with Random Forests.* ECCV 2014.
@@ -310,18 +242,8 @@ This launches the unified dashboard with four sections/tabs:
 5. Kaggle Dataset: Food Images (Food-101) — https://www.kaggle.com/datasets/kmader/food41
 6. TensorFlow Datasets — Food101 — https://www.tensorflow.org/datasets/catalog/food101
 7. Hugging Face Datasets — ethz/food101 — https://huggingface.co/datasets/ethz/food101
+8. Claude AI And some chatgpt 
 
----
-### Next Step
-
-This README defines the finalized architecture and dataset plan for the **Smart Hospitality Management System**. Per your instructions, no code has been written yet.
-
-Please confirm to proceed with:
-- `requirements.txt`
-- Full source code (preprocessing, model, train, evaluate scripts for all 4 modules)
-- Unified Streamlit dashboard
-- Tests
-- Project report outline
 - Viva questions & answers
  Done ✅ 
   Ayush Singh 
