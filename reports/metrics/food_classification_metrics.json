@@ -1,0 +1,95 @@
+{
+  "accuracy": 0.87,
+  "precision_macro": 0.8751386589792388,
+  "recall_macro": 0.87,
+  "f1_macro": 0.8704397010229116,
+  "test_set_size": 300,
+  "num_classes": 12,
+  "per_class_report": {
+    "beignets": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 25.0
+    },
+    "bruschetta": {
+      "precision": 0.7272727272727273,
+      "recall": 0.96,
+      "f1-score": 0.8275862068965517,
+      "support": 25.0
+    },
+    "donuts": {
+      "precision": 0.7916666666666666,
+      "recall": 0.76,
+      "f1-score": 0.7755102040816326,
+      "support": 25.0
+    },
+    "french_fries": {
+      "precision": 0.9583333333333334,
+      "recall": 0.92,
+      "f1-score": 0.9387755102040817,
+      "support": 25.0
+    },
+    "hamburger": {
+      "precision": 0.92,
+      "recall": 0.92,
+      "f1-score": 0.92,
+      "support": 25.0
+    },
+    "ice_cream": {
+      "precision": 0.9166666666666666,
+      "recall": 0.88,
+      "f1-score": 0.8979591836734694,
+      "support": 25.0
+    },
+    "pizza": {
+      "precision": 1.0,
+      "recall": 0.88,
+      "f1-score": 0.9361702127659575,
+      "support": 25.0
+    },
+    "ramen": {
+      "precision": 1.0,
+      "recall": 0.96,
+      "f1-score": 0.9795918367346939,
+      "support": 25.0
+    },
+    "samosa": {
+      "precision": 0.782608695652174,
+      "recall": 0.72,
+      "f1-score": 0.75,
+      "support": 25.0
+    },
+    "steak": {
+      "precision": 0.8148148148148148,
+      "recall": 0.88,
+      "f1-score": 0.8461538461538461,
+      "support": 25.0
+    },
+    "sushi": {
+      "precision": 0.782608695652174,
+      "recall": 0.72,
+      "f1-score": 0.75,
+      "support": 25.0
+    },
+    "waffles": {
+      "precision": 0.8076923076923077,
+      "recall": 0.84,
+      "f1-score": 0.8235294117647058,
+      "support": 25.0
+    },
+    "accuracy": 0.87,
+    "macro avg": {
+      "precision": 0.8751386589792388,
+      "recall": 0.87,
+      "f1-score": 0.8704397010229116,
+      "support": 300.0
+    },
+    "weighted avg": {
+      "precision": 0.8751386589792387,
+      "recall": 0.87,
+      "f1-score": 0.8704397010229116,
+      "support": 300.0
+    }
+  }
+}
