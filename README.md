@@ -244,6 +244,5 @@ smart-hospitality-management-system/
 7. Hugging Face Datasets — ethz/food101 — https://huggingface.co/datasets/ethz/food101
 8. Claude AI And some chatgpt 
 
-- Viva questions & answers
- Done ✅ 
+- Build By ✅ 
   Ayush Singh 
