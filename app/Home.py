@@ -525,7 +525,7 @@ with about_col1:
 
 with about_col2:
     st.markdown(
-        '<div class="about-heading">If a module shows "Pending"</div>',
+        '<div class="about-heading">Module shows "Pending"</div>',
         unsafe_allow_html=True
     )
 
